@@ -2,8 +2,8 @@ package org.example.entities;
 import org.example.enums.VehicleType;
 
 public class Vehicle {
-    String vehicleNumber;
-    VehicleType vehicleType;
+    public String vehicleNumber;
+    public VehicleType vehicleType;
 
     public Vehicle(String vehicleNumber, VehicleType vehicleType) {
         this.vehicleNumber = vehicleNumber;
