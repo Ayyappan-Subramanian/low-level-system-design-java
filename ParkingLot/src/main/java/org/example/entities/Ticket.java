@@ -6,13 +6,13 @@ import java.time.LocalDateTime;
 
 public class Ticket {
 
-    public ParkingSpot spotId;
+    public ParkingSpot spot;
     Vehicle vehicleNumber;
     public ParkingLevel level;
     public LocalDateTime entryTime;
 
-    public Ticket (ParkingSpot spotId, ParkingLevel level) {
-        this.spotId = spotId;
+    public Ticket (ParkingSpot spot, ParkingLevel level) {
+        this.spot = spot;
        // this.vehicleNumber = vehicleNumber;
         this.level = level;
         this.entryTime = LocalDateTime.now();
