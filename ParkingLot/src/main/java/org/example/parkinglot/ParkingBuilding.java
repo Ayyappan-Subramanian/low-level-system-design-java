@@ -31,7 +31,7 @@ public class ParkingBuilding {
             }
 
         }
-        return null;
+        throw new RuntimeException("No managers available or no spot available");
     }
 
     public boolean unallocate(Ticket ticket) {

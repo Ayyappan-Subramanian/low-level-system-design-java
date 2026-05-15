@@ -11,7 +11,9 @@ public class PremiumCustomerFeeCalculator implements FeeCalculator{
     public double CalculateFee(Ticket ticket) {
 
         Duration duration = Duration.between(LocalDateTime.now(), ticket.entryTime).abs();
-        int hours = (int) (duration.toMinutes() / 60);
+        int hours = (int) ((duration.toMinutes() + 59) / 60);
+        System.out.println(duration);
+        System.out.println(hours);
         return hours*10.0;
     }
 }

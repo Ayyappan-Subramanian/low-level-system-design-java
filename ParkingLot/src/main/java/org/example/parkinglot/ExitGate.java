@@ -9,7 +9,12 @@ import org.example.payment.PaymentMethod;
 
 public class ExitGate {
 
-    public void CompleteExit(Ticket ticket, PaymentMethod paymentMethod, CustomerType customerType, ParkingBuilding building) {
+    public ParkingBuilding building;
+    public ExitGate(ParkingBuilding building) {
+        this.building = building;
+    }
+
+    public void CompleteExit(Ticket ticket, PaymentMethod paymentMethod, CustomerType customerType) {
 
        double parkingFare = 0;
 
@@ -21,9 +26,9 @@ public class ExitGate {
             parkingFare = new RegularCustomerFeeCalculator().CalculateFee(ticket);
         }
 
-        if(paymentMethod.pay(parkingFare));
+        if(paymentMethod.pay(parkingFare))
         {
-            if(building.unallocate(ticket));
+            if(building.unallocate(ticket))
             {
                 System.out.println("Exit process is successful - Gate is opened");
             }

@@ -15,6 +15,6 @@ public class Ticket {
         this.spot = spot;
        // this.vehicleNumber = vehicleNumber;
         this.level = level;
-        this.entryTime = LocalDateTime.now();
+        this.entryTime = LocalDateTime.now().minusMinutes(90);
     }
 }
